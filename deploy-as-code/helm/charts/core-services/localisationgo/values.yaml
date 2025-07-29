@@ -58,6 +58,11 @@ env: |
       secretKeyRef:
         name: db
         key: password
+ - name: LOCALISATIONGO_HOST
+   valueFrom:
+     configMapKeyRef:
+       name: egov-service-host
+       key: localisationgo
   - name: REDIS_HOST
     value: "redis.backbone"
   - name: REDIS_PORT
